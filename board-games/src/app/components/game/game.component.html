@@ -1,0 +1,20 @@
+<mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{gameData.name}}</mat-card-title>
+      <mat-card-subtitle>{{gameData.artist}}, {{gameData.designer}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image [src]="gameData.imageUrl">
+    <mat-card-content>
+     
+          <span>{{gameData.maxNumberOfPlayers}}</span>
+          <span>{{gameData.maxPlayingTime}}</span>
+          <span>{{gameData.minAge}}</span>
+          <span>{{gameData.minNumberOfPlayers}}</span>
+          <span>{{gameData.minPlayingTime}}</span>
+          <span>{{gameData.publisher}}</span>
+          <span>{{gameData.rate}}</span>
+          <span>{{gameData.year}}</span>
+     
+    </mat-card-content>
+  </mat-card>

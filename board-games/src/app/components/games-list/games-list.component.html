@@ -1,0 +1,7 @@
+  <input type="search" (keyup)="search($event.target.value)"/>
+  <ul *ngIf="games">
+    <li *ngFor="let game of gamesResults">
+      <app-game [gameData]="game"></app-game>
+    </li>
+  </ul>
+
