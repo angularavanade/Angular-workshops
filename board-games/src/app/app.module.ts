@@ -9,17 +9,21 @@ import { GameComponent } from './components/game/game.component';
 
 
 import { MatCardModule } from '@angular/material';
+import { FilterBoxComponent } from './components/filter-box/filter-box.component';
+import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
     GamesListComponent,
-    GameComponent
+    GameComponent,
+    FilterBoxComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     MatCardModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

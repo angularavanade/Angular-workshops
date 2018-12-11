@@ -1,7 +1,13 @@
-  <input type="search" (keyup)="search($event.target.value)"/>
+<header>
+  <input type="search" (keyup)="searchTextChange.next($event.target.value)"/>
+</header>
+<main>
   <ul *ngIf="games">
     <li *ngFor="let game of gamesResults">
       <app-game [gameData]="game"></app-game>
     </li>
   </ul>
-
+</main>  
+<aside>
+  <app-filter-box></app-filter-box> 
+</aside>
