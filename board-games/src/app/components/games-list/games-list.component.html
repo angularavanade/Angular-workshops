@@ -1,9 +1,11 @@
-<header>
+<header class="search-input">
+  
   <input type="search" (keyup)="searchTextChange.next($event.target.value)"/>
+  <span class="fa fa-search"></span>
 </header>
 <main>
-  <ul *ngIf="games">
-    <li *ngFor="let game of gamesResults">
+  <ul *ngIf="games" class="games-list">
+    <li *ngFor="let game of gamesResults" class="game-card">
       <app-game [gameData]="game"></app-game>
     </li>
   </ul>

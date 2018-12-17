@@ -1,7 +1,60 @@
+@import "../../../assets/styles/variables.scss";
+
 img{
-    max-width: 300px;
+    height: 100%;
+    width: auto;
 }
 
-mat-card-content span{
-    padding: 0 10px;
+.game-img-wrapper {
+    height: 200px;
+}
+
+.game-name {
+    font-family: $FontPrimaryLight;
+    font-size: 2em;
+    margin: 30px 0 10px 0;
+    font-weight: 300;
+}
+
+.fa-star {
+    margin-right: 1px;
+    &.checked {
+        color: $ColorYellow;
+    }
+}
+
+.game-owner {
+    font-weight: 300;
+    color: $ColorGrey;
+    text-transform: uppercase;
+    font-size: 11px;
+    margin: 10px 0;
+    line-height: 15px;
+}
+
+.game-content {
+    padding: 10px 15px;
+}
+
+.game-rules {
+    margin: 20px 0 12px 0;
+    font-size: 15px;
+    section {
+        display: inline-block;
+        padding-right: 15px;
+        color: $ColorPrimary;
+    }
+
+    .fa {
+        margin-right: 3px;
+    }
+}
+
+.game-info {
+    font-size: 12px; 
+    color: $ColorGrey;
+}
+
+.game-publisher {
+    font-style: italic;
 }

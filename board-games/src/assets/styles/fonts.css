@@ -1,0 +1,13 @@
+@font-face {
+    font-family: "Lato Regular";
+    src: url("../fonts/lato-regular-webfont.woff2") format("woff2"),
+         url("../fonts/lato-regular-webfont.woff") format("woff"),
+         url("../fonts/lato-regular-webfont.ttf") format("opentype");
+  }
+
+  @font-face {
+    font-family: "Lato Light";
+    src: url("../fonts/lato-light-webfont.woff2") format("woff2"),
+         url("../fonts/lato-light-webfont.woff") format("woff"),
+         url("../fonts/lato-light-webfont.ttf") format("opentype");
+  }

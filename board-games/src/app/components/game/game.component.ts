@@ -8,11 +8,13 @@ import { Game } from 'src/app/models/game';
 })
 export class GameComponent implements OnInit {
 
+  rate: number;
   constructor() { }
 
   @Input() gameData: Game;
 
   ngOnInit() {
+    this.rate = Math.round((5*this.gameData.rate)/100);
   }
 
 }
