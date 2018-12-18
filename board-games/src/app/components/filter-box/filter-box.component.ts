@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl} from '@angular/forms';
+import { FilterService } from 'src/app/services/filter.service';
 
 @Component({
   selector: 'app-filter-box',
@@ -18,13 +19,12 @@ export class FilterBoxComponent implements OnInit {
     publisher: new FormControl('')
   });
 
-  constructor() { }
+  constructor(private filterService: FilterService) { }
 
   ngOnInit() {
   }
 
   filterBy(){
-    this.filterForm.value
-
+    this.filterService.setFilter(this.filterForm.value);
   }
 }

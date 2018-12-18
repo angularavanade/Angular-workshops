@@ -15,6 +15,7 @@ export class GamesListComponent implements OnInit {
   gamesResults: Game[];
   searchTextChange = new BehaviorSubject<string>('');
 
+
   constructor(private gamesService: GamesService, private filterService: FilterService) { }
 
   
@@ -22,9 +23,14 @@ export class GamesListComponent implements OnInit {
     this.gamesService.getGames().subscribe(data => { 
       this.gamesResults = this.games = data;
     });
+
     this.searchTextChange.pipe(
       debounceTime(500)
     ).subscribe(x => this.gamesResults = this.filterService.search(x, this.games));
+
+    this.filterService.onFilterChange.subscribe(
+      () => this.gamesResults = this.filterService.filterGames(this.games)
+      );
   }
 
 }
