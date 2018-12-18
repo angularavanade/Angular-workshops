@@ -1,0 +1,35 @@
+<form [formGroup]="filterForm" (ngSubmit)="filterBy()">
+  <div>
+    <label>Name</label>
+    <input type="text" formControlName="name"/>
+  </div>
+
+  <div>
+    <label>Playing Time</label>
+    <input type="number" formControlName="minPlayingTime"/> -
+    <input type="number" formControlName="maxPlayingTime"/>
+  </div>
+
+  <div>
+    <label>Minimum Age</label>
+    <input type="number" formControlName="minAge"/>
+  </div>
+
+  <div>
+    <label>Rate</label>
+    <input type="number" formControlName="rate"/>
+  </div>
+
+  <div>
+    <label>Number Of Players</label>
+    <input type="number" formControlName="minNumberOfPlayers" /> -
+    <input type="number" formControlName="maxNumberOfPlayers" />
+  </div>
+
+  <div>
+    <label>Publisher</label>
+    <input type="text" formControlName="publisher"/>
+  </div>
+
+  <button type="submit">Filter</button>
+</form>

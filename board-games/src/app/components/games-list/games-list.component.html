@@ -1,0 +1,15 @@
+<header class="search-input">
+  
+  <input type="search" (keyup)="searchTextChange.next($event.target.value)"/>
+  <span class="fa fa-search"></span>
+</header>
+<main>
+  <ul *ngIf="games" class="games-list">
+    <li *ngFor="let game of gamesResults" class="game-card">
+      <app-game [gameData]="game"></app-game>
+    </li>
+  </ul>
+</main>  
+<aside>
+  <app-filter-box></app-filter-box> 
+</aside>
