@@ -1,35 +1,41 @@
-<form [formGroup]="filterForm" (ngSubmit)="filterBy()">
-  <div>
-    <label>Name</label>
-    <input type="text" formControlName="name"/>
-  </div>
+<div id="filter-box">
+  <form [formGroup]="filterForm" (ngSubmit)="filterBy()">
+    <div>
+      <div>
+        <label>Name</label>
+        <input class="normal-input" type="text" formControlName="name"/>
+      </div>
+      <div>
+        <label>Rate</label>
+        <input class="normal-input" type="number" formControlName="rate"/>
+      </div>
+    </div>
 
-  <div>
-    <label>Playing Time</label>
-    <input type="number" formControlName="minPlayingTime"/> -
-    <input type="number" formControlName="maxPlayingTime"/>
-  </div>
+    <div>
+      <label>Playing Time</label>
+      <input class="small-input" type="number" formControlName="minPlayingTime"/> -
+      <input class="small-input" type="number" formControlName="maxPlayingTime"/>
+    </div>
 
-  <div>
-    <label>Minimum Age</label>
-    <input type="number" formControlName="minAge"/>
-  </div>
+    <div>
+      <label>Minimum Age</label>
+      <input class="small-input" type="number" formControlName="minAge"/>
+    </div>
 
-  <div>
-    <label>Rate</label>
-    <input type="number" formControlName="rate"/>
-  </div>
+    
 
-  <div>
-    <label>Number Of Players</label>
-    <input type="number" formControlName="minNumberOfPlayers" /> -
-    <input type="number" formControlName="maxNumberOfPlayers" />
-  </div>
+    <div>
+      <label>Number Of Players</label>
+      <input class="small-input" type="number" formControlName="minNumberOfPlayers" /> -
+      <input class="small-input" type="number" formControlName="maxNumberOfPlayers" />
+    </div>
 
-  <div>
-    <label>Publisher</label>
-    <input type="text" formControlName="publisher"/>
-  </div>
-
-  <button type="submit">Filter</button>
-</form>
+    <div>
+      <label>Publisher</label>
+      <input class="normal-input" type="text" formControlName="publisher"/>
+    </div>
+    <div>
+      <button type="submit">Search</button>
+    </div>
+  </form>
+</div>

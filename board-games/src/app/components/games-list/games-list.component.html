@@ -11,5 +11,10 @@
   </ul>
 </main>  
 <aside>
-  <app-filter-box></app-filter-box> 
+  <div id="filter-open-close">
+    <span class="text-90">Filters</span>
+    <span [@openClose]="isOpen ? 'hide' : 'show'" class="fa fa-angle-left" (click)="openClose()"></span>
+    <span [@openClose]="isOpen ? 'show' : 'hide'" class="fa fa-angle-right" (click)="openClose()"></span>
+  </div>
+  <app-filter-box [@openClose]="isOpen ? 'open' : 'closed'" class="filters-container"></app-filter-box> 
 </aside>

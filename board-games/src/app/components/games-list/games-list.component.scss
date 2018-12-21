@@ -31,6 +31,44 @@ ul {
     }
 }
 
+aside{
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    height: 100%;
+
+    #filter-open-close{
+        padding-top: 50px;
+        float:left;
+        width: 35px;
+    }
+
+    .text-90{
+        -webkit-transform: rotate(-90deg);
+        -moz-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+        -o-transform: rotate(-90deg);
+        float: right;
+        margin: 20px 0px;
+        font-family: $FontPrimaryLight;
+        font-size: 20px;
+        font-weight: 600;
+        font-variant: small-caps;
+    }
+
+    .fa-angle-left, .fa-angle-right{
+        color: $ColorGrey;
+        font-size: 38px;
+    }
+    
+    app-filter-box{
+        float:right;
+        background-color: #fff;
+        height: 100%;
+        box-shadow: 0 2px 10px $ColorGrey;
+    }
+}
+
 @media only screen and (max-width: 992px) {
     .game-card {
         flex: 0 0 50%;
