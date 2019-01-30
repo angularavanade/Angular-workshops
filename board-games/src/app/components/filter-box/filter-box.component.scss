@@ -1,10 +1,43 @@
-form{
-    div{
-        label {
-            display: block;
-        }
-        input {
+@import "../../../assets/styles/variables.scss";
 
+#filter-box{
+    margin: 50px 20px;
+
+    form{
+        div{
+            width:190px;
+
+            label {
+                display: block;
+                font-family: $FontPrimaryLight;
+                font-size: 14px;
+                margin: 20px 0 0 0;
+                font-weight: 300;
+            }
+
+            input{
+                height: 30px;
+                border-width: 0 0 1px 0;
+                border-color: $ColorGrey;
+            }
+
+            .normal-input {
+                width: 150px;
+            }
+
+            .small-input{
+                width:70px;
+            }
+
+            button{
+                margin: 20px auto;
+                width: 150px;
+                height: 30px;
+                font-family: "Lato Light";
+                font-size: 1em;
+                font-weight: 600;
+                color: $ColorGrey;
+            }
         }
-    }
-} 
+    } 
+}
