@@ -11,21 +11,29 @@ import { GameComponent } from './components/game/game.component';
 import { MatCardModule } from '@angular/material';
 import { FilterBoxComponent } from './components/filter-box/filter-box.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { LoginComponent } from './components/login/login.component';
+import { RouterModule } from '@angular/router';
+import routing from './app.routing';
+import { LoginService } from './services/login.service';
 @NgModule({
   declarations: [
     AppComponent,
     GamesListComponent,
     GameComponent,
-    FilterBoxComponent
+    FilterBoxComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     MatCardModule,
     BrowserAnimationsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterModule.forRoot(
+      routing
+    )
   ],
-  providers: [],
+  providers: [LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
