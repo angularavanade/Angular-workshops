@@ -8,7 +8,11 @@
         <label for="">Password</label>
         <input type="password" formControlName = "password">
       </div>
-      <button type="submit">LOGIN</button>
-      <label *ngIf="errorLogin">No chyba nie takie bylo haslo!</label>
+      <button type="submit">
+        LOGIN
+        <span class="fa fa-arrow-right"></span>
+      </button>
+      
+      <label class="error-message" *ngIf="errorLogin">No chyba nie takie bylo haslo!</label>
     </form>
   </div>
